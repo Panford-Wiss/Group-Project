@@ -29,21 +29,21 @@ const Subscribe = () => {
      </div>
      <div className='container subscribe'>
        <h2>Use The Form Below To Send Us Message</h2>
-       <form>
+       <form action="http://localhost:3001/api/messages" method='POST'>
          <div className='form-control'>
            <div>
-           <input type="text" placeholder = "Enter your FullName..."/>
+           <input type="text" name="name" placeholder = "Enter your FullName..."/>
              </div>
              <br/>
              <div>
-           <input type="email" placeholder = "Enter your Email..."/>
+           <input type="email" name="email" placeholder = "Enter your Email..."/> 
              </div>
             <br/>
              <div>
-           <input type="number" placeholder = "Enter your PhoneNumber...."/>
+           <input type="number" name="phoneNumber" placeholder = "Enter your PhoneNumber...."/>
              </div>
              <br/>
-             <textarea name='my_textarea' rows= "10" cols="25" spellCheck="true" placeholder='Type your Message Here...'/>
+             <textarea name="message"  rows= "10" cols="25" spellCheck="true" placeholder='Type your Message Here...'/>
              <div className= 'button-1'>
              <button> Send Message</button>
              </div>
